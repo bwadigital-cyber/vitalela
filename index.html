@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalEla | Guia Completo de Saúde & Bem-Estar Feminino</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f7faf8;
+            color: #2d3748;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(44, 94, 67, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #2c5e43;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #a3b899;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #edf4f0 100%);
+        }
+
+        .tagline {
+            color: #2c5e43;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(44, 94, 67, 0.06);
+            padding: 6px 16px;
+            border-radius: 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #1a3627;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-desc {
+            font-size: 15px;
+            color: #4a5568;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            font-weight: 300;
+        }
+
+        /* Secção de Exibição das Capas dos Ebooks */
+        .books-display {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .book-wrapper {
+            text-align: center;
+        }
+
+        .book-card {
+            width: 180px;
+            height: 250px;
+            border-radius: 10px;
+            box-shadow: 0 12px 28px rgba(44, 94, 67, 0.15);
+            overflow: hidden;
+            background: #2c5e43;
+            transition: transform 0.3s ease;
+            margin-bottom: 12px;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2c5e43;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Bloco de Preço e CTA */
+        .price-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 30px 24px;
+            max-width: 380px;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #a0aec0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .current-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c5e43;
+            margin: 2px 0 15px 0;
+        }
+
+        .current-price span {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #2c5e43;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 24px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(44, 94, 67, 0.2);
+        }
+
+        .cta-btn:hover {
+            background: #1e422e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 94, 67, 0.35);
+        }
+
+        .secure-notice {
+            font-size: 11px;
+            color: #718096;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .secure-notice i {
+            color: #2c5e43;
+        }
+
+        /* O Que Vai Receber */
+        .entrega-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 28px;
+            color: #1a3627;
+            margin-bottom: 50px;
+        }
+
+        .grid-entrega {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .entrega-card {
+            background: #f7faf8;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #edf2f0;
+        }
+
+        .entrega-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(44, 94, 67, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c5e43;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .entrega-card h3 {
+            font-size: 18px;
+            color: #1a3627;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .entrega-card p {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 300;
+        }
+
+        /* FAQ Section (Acórdão Avançado) */
+        .faq-section {
+            padding: 80px 0;
+            background: #f7faf8;
+            border-top: 1px solid #edf2f0;
+        }
+
+        .faq-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 15px;
+            color: #2d3748;
+            user-select: none;
+        }
+
+        .faq-question i {
+            color: #2c5e43;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 0 24px;
+        }
+
+        /* Classes ativadas via JavaScript */
+        .faq-item.active {
+            border-color: #2c5e43;
+            box-shadow: 0 4px 20px rgba(44, 94, 67, 0.04);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3627;
+            color: #ffffff;
+            padding: 50px 0 40px 0;
+            text-align: center;
+        }
+
+        .suporte-link {
+            color: #a3b899;
+            text-decoration: none;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.03);
+            padding: 8px 18px;
+            border-radius: 8px;
+        }
+
+        .suporte-link:hover {
+            color: #ffffff;
+        }
+
+        .powered {
+            font-size: 11px;
+            color: #718096;
+            letter-spacing: 1px;
+        }
+
+        .powered span {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Responsividade Tablets e PC */
+        @media (min-width: 768px) {
+            h1 { font-size: 46px; }
+            .grid-entrega { grid-template-columns: repeat(2, 1fr); }
+            .section-title { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Vital<span>Ela</span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="tagline">Estilo de Vida & Equilíbrio</span>
+            <h1>Assume o Controlo do Teu Corpo, Saúde e <span>Autoconfiança</span></h1>
+            <p class="hero-desc">Descobre o caminho para transformar a tua rotina. Um mapa prático focado em nutrição consciente, treinos progressivos e regulação hormonal natural adaptado à realidade da mulher moderna.</p>
+            
+            <div class="books-display">
+                <div class="book-wrapper">
+                    <div class="book-card">
+                        <img src="capa1.jpg" alt="Guia Completo VitalEla">
+                    </div>
+                    <span class="book-label">Guia Completo</span>
+                </div>
+                <div class="book-wrapper">
+                    <div class="book-card">
+                        <img src="capa2.jpg" alt="Mini-guia de Suplementos">
+                    </div>
+                    <span class="book-label">Bónus: Guia de Suplementos</span>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <div class="old-price">Preço Normal: 15.000 KZ</div>
+                <div class="current-price">8.500 <span>KZ</span></div>
+                <a href="https://pay.kuenha.com/b983be0b-ff48-4f27-9e34-c5cf252b3de3" class="cta-btn" target="_blank">
+                    <i class="fa-solid fa-basket-shopping"></i> ADQUIRIR O MEU COMBO
+                </a>
+                <div class="secure-notice">
+                    <i class="fa-solid fa-square-check"></i> Pagamento local seguro via Express ou Referência
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entrega-section">
+        <div class="container">
+            <h2 class="section-title">O Que Vais Receber no Teu E-mail</h2>
+            <div class="grid-entrega">
+                
+                <div class="entrega-card">
+                    <div class="entrega-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                    <h3>1. Guia Principal de Saúde Feminina</h3>
+                    <p>Um manual detalhado de 22 páginas cobrindo desde a avaliação inicial (metas SMART), planos de treinos estruturados semanais (cardio, força e flexibilidade) até receitas fit deliciosas para o pequeno-almoço, almoço e jantar.</p>
+                </div>
+
+                <div class="entrega-card">
+                    <div class="entrega-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>2. Mini-Guia de Suplementos Naturais</h3>
+                    <p>O teu bónus exclusivo. Um guia focado em como combater o stress, a ansiedade e o cansaço mental usando vitaminas essenciais do complexo B e ativos fáceis de encontrar nas farmácias e mercados locais de Luanda.</p>
+                </div>
+
+                <div class="entrega-card">
+                    <div class="entrega-icon"><i class="fa-solid fa-bed"></i></div>
+                    <h3>3. Higiene do Sono e Gestão do Stress</h3>
+                    <p>Técnicas científicas e comportamentais de relaxamento e respiração consciente para acalmar o teu sistema nervoso, garantindo um sono reparador que zera os teus níveis de cortisol logo pela manhã.</p>
+                </div>
+
+                <div class="entrega-card">
+                    <div class="entrega-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>4. Monitorização além da Balança</h3>
+                    <p>Aprende a medir o teu progresso através de indicadores físicos e emocionais reais, libertando-te da ditadura da balança e focando na evolução da tua energia e amor-próprio.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona a entrega dos e-books?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O processo é 100% automatizado. Assim que fazes o pagamento na plataforma segura da Kuenha, o sistema valida e envia os dois arquivos digitais em formato PDF diretamente para o e-mail que introduziste no momento da compra.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Tenho suporte se tiver dificuldades com o download?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Com certeza! A equipa da BWA Digital oferece suporte total. Se tiveres qualquer problema ou não encontrares o e-mail na tua caixa de entrada, basta enviares uma mensagem para o nosso e-mail oficial de atendimento.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Os conselhos e receitas são difíceis de seguir em Angola?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        De maneira nenhuma. Este guia foi estruturado a pensar na nossa realidade local. Os alimentos, chás e suplementos recomendados são acessíveis e facilmente encontrados nos supermercados, mercados e farmácias de Luanda.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="mailto:bwaglobalservices@gmail.com" class="suporte-link">
+                <i class="fa-solid fa-envelope"></i> Suporte ao Cliente: bwaglobalservices@gmail.com
+            </a>
+            <div class="powered">Powered by <span>BWA DIGITAL</span></div>
+        </div>
+    </footer>
+
+    <script>
+        // JS do FAQ Acórdão com animação fluida de altura
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = null;
+                    item.classList.remove('active');
+                } else {
+                    // Fecha qualquer outro FAQ ativo antes de abrir o novo
+                    document.querySelectorAll('.faq-item').forEach(el => {
+                        el.classList.remove('active');
+                        el.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
