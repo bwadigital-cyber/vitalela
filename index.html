@@ -349,17 +349,29 @@
             letter-spacing: 1px;
         }
 
-        .powered span {
-            color: #ffffff;
-            font-weight: 600;
-        }
+        .media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
 
-        /* Responsividade Tablets e PC */
-        @media (min-width: 768px) {
-            h1 { font-size: 46px; }
-            .grid-entrega { grid-template-columns: repeat(2, 1fr); }
-            .section-title { font-size: 32px; }
-        }
+/* Aplicamos o mesmo estilo aos dois cards */
+.book-card, .model-card {
+    width: 180px;  /* Tamanho fixo para ambos */
+    height: 250px; /* Altura fixa para ambos */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.book-card img, .model-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção sem deformar */
+}
+        
     </style>
     <!-- Meta Pixel Code -->
 <script>
@@ -393,14 +405,22 @@ src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
             <h1>Tudo o que precisas para cuidar da tua saúde, num único método.</h1>
             <p class="hero-desc">Descobre o caminho para transformar a tua rotina. Um mapa prático focado em nutrição consciente, treinos progressivos e regulação hormonal natural adaptado à realidade da mulher moderna.</p>
             
-            <div class="books-display">
-                <div class="book-wrapper">
-                    <div class="book-card">
-                        <img src="V-Capa.1.0.png" alt="VitalEla - Guia Completo">
-                    </div>
-                    <span class="book-label">Guia Completo</span>
-                </div>
-            </div>
+            <!-- Crie este container pai para alinhar os dois -->
+<div class="media-container">
+    <div class="book-card">
+        <img src="V-Capa.1.0.png" alt="VitalEla">
+    </div>
+    <div class="book-card">
+        <img src="V-modelo.png" alt="Modelo VitalEla">
+    </div>
+</div>
+
+    
+  
+
+</div>
+
+</div>
 
             <div class="price-box">
                 <div class="old-price">15.000 KZ</div>
