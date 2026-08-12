@@ -44,17 +44,23 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: #2c5e43;
-            letter-spacing: -0.5px;
-        }
+        .logo-wrap {
+    text-align: left;
+}
 
-        .logo span {
-            color: #a3b899;
-        }
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c5e43;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #d17b98;
+
+}
 
         /* Hero Section */
         .hero {
@@ -63,17 +69,14 @@
             background: linear-gradient(180deg, #ffffff 0%, #edf4f0 100%);
         }
 
-        .tagline {
-            color: #2c5e43;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            margin-bottom: 20px;
-            display: inline-block;
-            background: rgba(44, 94, 67, 0.06);
-            padding: 6px 16px;
-            border-radius: 30px;
+       .logo-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #a3b899;
+    margin-top: 2px;
         }
 
         h1 {
@@ -202,6 +205,30 @@
         .secure-notice i {
             color: #2c5e43;
         }
+
+        .trust-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #edf2f0;
+}
+
+.trust-item {
+    font-size: 10px;
+    font-weight: 500;
+    color: #718096;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.trust-item i {
+    color: #2c5e43;
+    font-size: 11px;
+}
 
         /* O Que Vai Receber */
         .entrega-section {
@@ -395,8 +422,10 @@ src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
 
     <header>
         <div class="container nav-container">
-            <div class="logo">Vital<span>Ela</span></div>
-        </div>
+            <div class="logo-wrap">
+    <div class="logo">VITAL<span>ELA</span></div>
+    <div class="logo-tagline">Saúde e Bem-Estar Feminino</div>
+</div>
     </header>
 
     <section class="hero">
@@ -432,6 +461,11 @@ src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
                     <i class="fa-solid fa-book-open"></i> ADQUIRIR O MEU GUIA
                 </a>
                 <div class="secure-notice">
+                    <div class="trust-bar">
+    <div class="trust-item"><i class="fa-solid fa-lock"></i> Pagamento 100% seguro</div>
+    <div class="trust-item"><i class="fa-solid fa-bolt"></i> Acesso imediato</div>
+    <div class="trust-item"><i class="fa-solid fa-headset"></i> Suporte dedicado</div>
+</div>
                     <i class="fa-solid fa-square-check"></i> Recebe acesso imediatamente após a confirmação
                 </div>
             </div>
@@ -452,7 +486,7 @@ src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
                 <div class="entrega-card">
                     <div class="entrega-icon"><i class="fa-solid fa-leaf"></i></div>
                     <h3>2. Bónus Exclusivo</h3>
-                    <p>O teu bónus exclusivo. Aprende como acelerar a tua transformação física através de hábitos inteligentes, alimentação equilibrada e estratégias comprovadas para emagrecer sem dietas extremas. Um guia simples e prático para te ajudar a conquistar mais saúde, confiança e bem-estar.</p>
+                    <p>O teu bónus exclusivo. Aprende a transformar a tua rotina através de hábitos inteligentes, alimentação equilibrada e estratégias sustentáveis para te sentires mais leve e com mais energia no dia a dia. Um guia simples e prático para te ajudar a conquistar mais saúde, confiança e bem-estar.</p>
                 </div>
 
                 <div class="entrega-card">
@@ -512,11 +546,10 @@ src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
 
     <footer>
         <div class="container">
-            <a href="mailto:bwaglobalservices@gmail.com" class="suporte-link">
-                <i class="fa-solid fa-envelope"></i> Suporte ao Cliente: vitalelaservices@gmail.com
-            </a>
-            <div class="powered">Powered by <span>BWA DIGITAL</span></div>
-        </div>
+    <a href="mailto:vitalelaservices@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Suporte ao Cliente: vitalelaservices@gmail.com
+    </a>
+</div>
     </footer>
 
     <script>
