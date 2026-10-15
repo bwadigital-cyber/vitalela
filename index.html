@@ -1,12 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VitalEla | Guia Completo de Saúde & Bem-Estar Feminino</title>
+    <meta name="description" content="Descobre o Guia VitalEla, com conteúdos práticos sobre saúde e bem-estar feminino, alimentação consciente, exercício, sono e autocuidado.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1500522251334676');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
+        alt="">
+    </noscript>
+    <!-- Fim do Meta Pixel -->
+
     <style>
+        :root {
+            --verde-escuro: #1a3627;
+            --verde: #2c5e43;
+            --verde-folha: #3f8a50;
+            --verde-claro: #edf4f0;
+            --creme: #f7faf8;
+            --rosa: #d17b98;
+            --texto: #2d3748;
+            --texto-suave: #64748b;
+            --branco: #ffffff;
+            --borda: #e2e8f0;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,11 +54,21 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
         body {
-            background-color: #f7faf8;
-            color: #2d3748;
+            background: var(--creme);
+            color: var(--texto);
+            line-height: 1.7;
             overflow-x: hidden;
-            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         .container {
@@ -28,10 +78,11 @@
             padding: 0 24px;
         }
 
-        /* Header */
+        /* CABEÇALHO */
+
         header {
-            padding: 20px 0;
-            background: #ffffff;
+            padding: 16px 0;
+            background: var(--branco);
             box-shadow: 0 2px 15px rgba(44, 94, 67, 0.05);
             position: sticky;
             top: 0;
@@ -44,129 +95,420 @@
             align-items: center;
         }
 
-        .logo-wrap {
-    text-align: left;
-}
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--verde);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #2c5e43;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+        .logo span {
+            color: var(--rosa);
+            font-family: inherit;
+        }
 
-.logo span {
-    color: #d17b98;
+        .logo-tagline {
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #82967b;
+            margin-top: 4px;
+        }
 
-}
+        /* INTRODUÇÃO: SEM PREÇO NEM CAPA */
 
-        /* Hero Section */
         .hero {
-            padding: 60px 0;
+            padding: 76px 0 70px;
             text-align: center;
             background: linear-gradient(180deg, #ffffff 0%, #edf4f0 100%);
         }
 
-       .logo-tagline {
-    font-family: 'Poppins', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: #a3b899;
-    margin-top: 2px;
+        .tagline {
+            display: inline-block;
+            color: var(--verde);
+            background: #e6efe6;
+            border-radius: 50px;
+            padding: 7px 16px;
+            margin-bottom: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            color: #1a3627;
+            max-width: 820px;
+            margin: 0 auto 22px;
+            font-size: clamp(30px, 5vw, 46px);
             line-height: 1.2;
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            color: var(--verde-escuro);
         }
 
         .hero-desc {
-            font-size: 15px;
+            max-width: 740px;
+            margin: 0 auto 28px;
             color: #4a5568;
-            max-width: 650px;
-            margin: 0 auto 40px auto;
+            font-size: 16px;
             font-weight: 300;
         }
 
-        /* Secção de Exibição das Capas dos Ebooks */
-        .books-display {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .book-wrapper {
-            text-align: center;
-        }
-
-        .book-card {
-            width: 180px;
-            height: 250px;
-            border-radius: 10px;
-            box-shadow: 0 12px 28px rgba(44, 94, 67, 0.15);
-            overflow: hidden;
-            background: #2c5e43;
-            transition: transform 0.3s ease;
-            margin-bottom: 12px;
-        }
-
-        .book-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .book-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .book-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: #2c5e43;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Bloco de Preço e CTA */
-        .price-box {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 24px;
-            padding: 30px 24px;
-            max-width: 380px;
+        .intro-note {
+            max-width: 700px;
             margin: 0 auto;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+            color: var(--texto-suave);
+            font-size: 14px;
         }
 
-        .old-price {
-            text-decoration: line-through;
-            color: #a0aec0;
+        .text-link-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 28px;
+            padding: 14px 22px;
+            background: var(--verde);
+            color: var(--branco);
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .text-link-btn:hover {
+            background: var(--verde-escuro);
+            transform: translateY(-2px);
+        }
+
+        /* SECÇÕES */
+
+        .section {
+            padding: 76px 0;
+        }
+
+        .section-white {
+            background: var(--branco);
+        }
+
+        .section-soft {
+            background: var(--creme);
+        }
+
+        .section-title {
+            max-width: 760px;
+            margin: 0 auto 16px;
+            text-align: center;
+            font-size: clamp(27px, 4vw, 35px);
+            line-height: 1.25;
+            color: var(--verde-escuro);
+        }
+
+        .section-desc {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--texto-suave);
+        }
+
+        /* CONTEÚDOS DO GUIA */
+
+        .grid-entrega {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .entrega-card {
+            padding: 28px;
+            border-radius: 18px;
+            background: var(--creme);
+            border: 1px solid #edf2f0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .entrega-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(44, 94, 67, 0.07);
+        }
+
+        .entrega-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(44, 94, 67, 0.09);
+            border-radius: 13px;
+            color: var(--verde);
+            font-size: 20px;
+        }
+
+        .entrega-card h3 {
+            margin-bottom: 10px;
+            color: var(--verde-escuro);
+            font-size: 20px;
+            line-height: 1.35;
+        }
+
+        .entrega-card p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #4a5568;
+        }
+
+        /* COMO O GUIA TE PODE ACOMPANHAR */
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 26px 20px;
+            background: var(--branco);
+            border: 1px solid #edf2f0;
+            border-radius: 18px;
+        }
+
+        .benefit i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 14px;
+            color: var(--verde);
+            background: #e6efe6;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .benefit h3 {
+            color: var(--verde-escuro);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .benefit p {
+            color: var(--texto-suave);
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        /* PARA QUEM É */
+
+        .audience-box {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 32px;
+            background: var(--branco);
+            border: 1px solid #e5ede7;
+            border-radius: 20px;
+        }
+
+        .audience-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px 26px;
+            list-style: none;
+        }
+
+        .audience-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .audience-list i {
+            color: var(--verde-folha);
+            margin-top: 5px;
+        }
+
+        .gentle-note {
+            max-width: 820px;
+            margin: 22px auto 0;
+            text-align: center;
+            color: var(--texto-suave);
+            font-size: 12px;
+        }
+
+        /* PERGUNTAS FREQUENTES */
+
+        .faq-container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 14px;
+            overflow: hidden;
+            background: var(--branco);
+            border: 1px solid var(--borda);
+            border-radius: 14px;
+            transition: border-color 0.25s ease;
+        }
+
+        .faq-item.active {
+            border-color: var(--verde);
+            box-shadow: 0 4px 20px rgba(44, 94, 67, 0.04);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 22px;
+            background: transparent;
+            border: 0;
+            text-align: left;
+            cursor: pointer;
+            color: var(--texto);
             font-size: 14px;
             font-weight: 500;
         }
 
+        .faq-question i {
+            flex-shrink: 0;
+            color: var(--verde);
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 22px;
+            color: var(--texto-suave);
+            font-size: 13px;
+            font-weight: 300;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+        }
+
+        /* OFERTA FINAL */
+
+        .offer-section {
+            padding: 82px 0;
+            background: linear-gradient(180deg, #edf4f0 0%, #ffffff 100%);
+        }
+
+        .offer-intro {
+            max-width: 760px;
+            margin: 0 auto 36px;
+            text-align: center;
+        }
+
+        .offer-intro p {
+            color: var(--texto-suave);
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .offer-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 34px;
+            margin: 0 auto 34px;
+        }
+
+        .book-card,
+        .model-card {
+            width: 220px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: var(--branco);
+            box-shadow: 0 12px 28px rgba(44, 94, 67, 0.13);
+        }
+
+        .book-card img,
+        .model-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .model-card img {
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .offer-label {
+            text-align: center;
+            margin-bottom: 22px;
+            color: var(--verde);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .price-box {
+            max-width: 410px;
+            margin: 0 auto;
+            padding: 32px 26px;
+            text-align: center;
+            background: var(--branco);
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-heading {
+            color: var(--verde-escuro);
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .price-description {
+            margin-bottom: 20px;
+            color: var(--texto-suave);
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .old-price {
+            color: #a0aec0;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: line-through;
+        }
+
         .current-price {
-            font-size: 36px;
+            margin: 0 0 20px;
+            color: var(--verde);
+            font-size: 39px;
             font-weight: 700;
-            color: #2c5e43;
-            margin: 2px 0 15px 0;
+            line-height: 1.25;
         }
 
         .current-price span {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 500;
         }
 
@@ -174,404 +516,573 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background: #2c5e43;
-            color: #ffffff;
+            gap: 11px;
+            width: 100%;
+            padding: 17px 20px;
+            background: var(--verde);
+            color: var(--branco);
+            border-radius: 13px;
             text-decoration: none;
-            padding: 18px 24px;
-            border-radius: 14px;
+            font-size: 15px;
             font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
             box-shadow: 0 6px 20px rgba(44, 94, 67, 0.2);
+            transition: 0.25s ease;
         }
 
         .cta-btn:hover {
-            background: #1e422e;
+            background: var(--verde-escuro);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 94, 67, 0.35);
-        }
-
-        .secure-notice {
-            font-size: 11px;
-            color: #718096;
-            margin-top: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .secure-notice i {
-            color: #2c5e43;
+            box-shadow: 0 8px 25px rgba(44, 94, 67, 0.25);
         }
 
         .trust-bar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #edf2f0;
-}
-
-.trust-item {
-    font-size: 10px;
-    font-weight: 500;
-    color: #718096;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.trust-item i {
-    color: #2c5e43;
-    font-size: 11px;
-}
-
-        /* O Que Vai Receber */
-        .entrega-section {
-            padding: 80px 0;
-            background: #ffffff;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 28px;
-            color: #1a3627;
-            margin-bottom: 50px;
-        }
-
-        .grid-entrega {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .entrega-card {
-            background: #f7faf8;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #edf2f0;
-        }
-
-        .entrega-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(44, 94, 67, 0.08);
-            border-radius: 12px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: #2c5e43;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .entrega-card h3 {
-            font-size: 18px;
-            color: #1a3627;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .entrega-card p {
-            font-size: 14px;
-            color: #4a5568;
-            font-weight: 300;
-        }
-
-        /* FAQ Section (Acórdão Avançado) */
-        .faq-section {
-            padding: 80px 0;
-            background: #f7faf8;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 18px;
             border-top: 1px solid #edf2f0;
         }
 
-        .faq-container {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question {
+        .trust-item {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 20px 24px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 15px;
-            color: #2d3748;
-            user-select: none;
+            gap: 6px;
+            color: var(--texto-suave);
+            font-size: 10px;
         }
 
-        .faq-question i {
-            color: #2c5e43;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .trust-item i {
+            color: var(--verde);
         }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            color: #64748b;
-            font-size: 14px;
-            font-weight: 300;
-            padding: 0 24px;
+        .secure-notice {
+            margin-top: 16px;
+            color: var(--texto-suave);
+            font-size: 11px;
         }
 
-        /* Classes ativadas via JavaScript */
-        .faq-item.active {
-            border-color: #2c5e43;
-            box-shadow: 0 4px 20px rgba(44, 94, 67, 0.04);
+        .secure-notice i {
+            color: var(--verde);
+            margin-right: 4px;
         }
 
-        .faq-item.active .faq-answer {
-            padding-bottom: 20px;
-        }
+        /* RODAPÉ */
 
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        /* Footer */
         footer {
-            background: #1a3627;
-            color: #ffffff;
-            padding: 50px 0 40px 0;
+            padding: 42px 0 34px;
             text-align: center;
+            background: var(--verde-escuro);
+            color: var(--branco);
         }
 
         .suporte-link {
-            color: #a3b899;
-            text-decoration: none;
-            font-size: 13px;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            margin-bottom: 30px;
-            background: rgba(255,255,255,0.03);
-            padding: 8px 18px;
-            border-radius: 8px;
+            margin-bottom: 25px;
+            padding: 10px 17px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9px;
+            color: #c2d6c4;
+            font-size: 12px;
+            text-decoration: none;
         }
 
         .suporte-link:hover {
-            color: #ffffff;
+            color: var(--branco);
         }
 
         .powered {
+            color: #a3b899;
             font-size: 11px;
-            color: #718096;
             letter-spacing: 1px;
         }
 
-        .media-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 20px;
-}
+        /* RESPONSIVIDADE */
 
-/* Aplicamos o mesmo estilo aos dois cards */
-.book-card, .model-card {
-    width: 180px;  /* Tamanho fixo para ambos */
-    height: 250px; /* Altura fixa para ambos */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 18px;
+            }
 
-.book-card img, .model-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantém a proporção sem deformar */
-}
-        
+            .hero {
+                padding: 54px 0;
+            }
+
+            .hero-desc {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 58px 0;
+            }
+
+            .grid-entrega {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .audience-list {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .audience-box {
+                padding: 24px 20px;
+            }
+
+            .offer-media {
+                gap: 14px;
+                align-items: stretch;
+            }
+
+            .book-card,
+            .model-card {
+                width: calc(50% - 7px);
+                height: 235px;
+            }
+
+            .price-box {
+                padding: 28px 20px;
+            }
+
+            .current-price {
+                font-size: 35px;
+            }
+
+            .faq-question {
+                padding: 18px;
+                font-size: 13px;
+            }
+
+            .faq-answer {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .suporte-link {
+                max-width: 100%;
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .book-card,
+            .model-card {
+                height: 195px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .logo-tagline {
+                font-size: 8px;
+            }
+        }
     </style>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1500522251334676');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1500522251334676&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
+
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
         <div class="container nav-container">
             <div class="logo-wrap">
-    <div class="logo">VITAL<span>ELA</span></div>
-    <div class="logo-tagline">Saúde e Bem-Estar Feminino</div>
-</div>
+                <div class="logo">VITAL<span>ELA</span></div>
+                <div class="logo-tagline">Saúde e Bem-Estar Feminino</div>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <span class="tagline">Método Completo de Saúde Feminina</span>
-            <h1>Tudo o que precisas para cuidar da tua saúde, num único método.</h1>
-            <p class="hero-desc">Descobre o caminho para transformar a tua rotina. Um mapa prático focado em nutrição consciente, treinos progressivos e regulação hormonal natural adaptado à realidade da mulher moderna.</p>
-            
-            <!-- Crie este container pai para alinhar os dois -->
-<div class="media-container">
-    <div class="book-card">
-        <img src="V-Capa.1.0.png" alt="VitalEla">
-    </div>
-    <div class="book-card">
-        <img src="V-modelo.png" alt="Modelo VitalEla">
-    </div>
-</div>
+    <main>
 
-    
-  
+        <!-- 1. INTRODUÇÃO: SEM PREÇO, CAPA OU MODELO -->
+        <section class="hero">
+            <div class="container">
+                <span class="tagline">Saúde e bem-estar feminino</span>
 
-</div>
+                <h1>Cuida de ti, compreende melhor o teu corpo e constrói hábitos que fazem sentido para a tua vida.</h1>
 
-</div>
+                <p class="hero-desc">
+                    A rotina nem sempre deixa espaço para cuidar de nós. O Guia VitalEla reúne conteúdos práticos sobre alimentação consciente, exercício físico, sono, gestão do stress e autocuidado, para te ajudar a dar pequenos passos em direção a uma rotina mais equilibrada.
+                </p>
 
-            <div class="price-box">
-                <div class="old-price">15.000 KZ</div>
+                <p class="intro-note">
+                    Um recurso de leitura simples, pensado para acompanhares ao teu ritmo e adaptares à tua realidade.
+                </p>
 
-<div class="current-price">
-8.500 <span>KZ</span>
-</div>
-                <a href="https://pay.kursinha.com/c/6a25d2bb6dbea0fb06e2b55a" class="cta-btn" target="_blank" onclick="fbq('track','InitiateCheckout');">
-                    <i class="fa-solid fa-book-open"></i> ADQUIRIR O MEU GUIA
+                <a href="#conteudos" class="text-link-btn">
+                    Descobrir o que vais aprender
+                    <i class="fa-solid fa-arrow-down"></i>
                 </a>
-                <div class="secure-notice">
+            </div>
+        </section>
+
+        <!-- 2. CONTEÚDOS DO GUIA -->
+        <section class="section section-white" id="conteudos">
+            <div class="container">
+                <h2 class="section-title">O que vais aprender</h2>
+
+                <p class="section-desc">
+                    Explora os principais temas do Guia VitalEla e descobre como cada um pode contribuir para uma abordagem mais consciente ao teu bem-estar.
+                </p>
+
+                <div class="grid-entrega">
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <h3>1. Exercício e movimento</h3>
+                        <p>
+                            Conhece diferentes formas de movimento, os fundamentos do treino e sugestões para construíres uma rotina progressiva, respeitando o teu nível e as tuas necessidades.
+                        </p>
+                    </article>
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3>2. Alimentação consciente</h3>
+                        <p>
+                            Descobre princípios de alimentação equilibrada, ideias de refeições práticas e formas de desenvolver hábitos alimentares mais conscientes, sem depender de restrições extremas.
+                        </p>
+                    </article>
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <h3>3. Sono e gestão do stress</h3>
+                        <p>
+                            Explora hábitos de descanso, técnicas de respiração e estratégias de gestão do stress que podes adaptar à tua rotina diária.
+                        </p>
+                    </article>
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3>4. Bem-estar além da balança</h3>
+                        <p>
+                            Aprende a prestar atenção a outros indicadores do teu bem-estar, como energia, sono, humor, força e consistência dos hábitos.
+                        </p>
+                    </article>
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3>5. Autoconhecimento e saúde feminina</h3>
+                        <p>
+                            Reflete sobre as tuas necessidades, conhece melhor os teus hábitos e explora conteúdos relacionados com saúde feminina e autocuidado.
+                        </p>
+                    </article>
+
+                    <article class="entrega-card">
+                        <div class="entrega-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>6. Emoções e equilíbrio pessoal</h3>
+                        <p>
+                            Descobre estratégias de autorreflexão, aceitação pessoal, criação de espaços de tranquilidade e construção de relações de apoio.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. VALOR PRÁTICO -->
+        <section class="section section-soft">
+            <div class="container">
+                <h2 class="section-title">Um guia para integrares no teu dia a dia</h2>
+
+                <p class="section-desc">
+                    Não precisas de mudar tudo de uma vez. Podes começar por compreender os temas, escolher o que faz sentido para ti e avançar gradualmente.
+                </p>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h3>Informação organizada</h3>
+                        <p>
+                            Vários temas de saúde e bem-estar reunidos num único recurso para consultares quando precisares.
+                        </p>
+                    </article>
+
+                    <article class="benefit">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>Ideias práticas</h3>
+                        <p>
+                            Sugestões, exercícios de reflexão e exemplos que podes adaptar às tuas circunstâncias.
+                        </p>
+                    </article>
+
+                    <article class="benefit">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3>Uma abordagem sem culpa</h3>
+                        <p>
+                            Um convite a cuidar de ti com paciência, consistência e respeito pelas tuas necessidades.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PARA QUEM É -->
+        <section class="section section-white">
+            <div class="container">
+                <h2 class="section-title">Este guia pode fazer sentido para ti se…</h2>
+
+                <p class="section-desc">
+                    Procuras informação acessível para compreender melhor diferentes áreas do bem-estar feminino e organizar os teus hábitos.
+                </p>
+
+                <div class="audience-box">
+                    <ul class="audience-list">
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Queres organizar melhor a tua rotina de autocuidado.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Procuras ideias de alimentação equilibrada e refeições práticas.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Queres compreender os fundamentos do exercício e do descanso.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Gostarias de desenvolver hábitos de forma gradual e realista.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Queres dedicar mais atenção ao teu bem-estar emocional.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Preferes consultar os conteúdos ao teu ritmo.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="gentle-note">
+                    O guia tem fins informativos e não substitui o aconselhamento de profissionais de saúde.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. PERGUNTAS FREQUENTES -->
+        <section class="section section-soft" id="perguntas">
+            <div class="container">
+                <h2 class="section-title">Perguntas frequentes</h2>
+
+                <p class="section-desc">
+                    Esclarece algumas dúvidas antes de conheceres a oferta.
+                </p>
+
+                <div class="faq-container">
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            O que está incluído no Guia VitalEla?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="faq-answer" aria-hidden="true">
+                            O guia aborda temas como exercício físico, alimentação consciente, receitas, gestão do stress, qualidade do sono, saúde feminina, autocuidado e bem-estar emocional. Consulta a descrição da oferta para confirmares todos os materiais incluídos.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Como funciona a entrega do ebook?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="faq-answer" aria-hidden="true">
+                            A entrega é digital, através do processo disponibilizado na plataforma de pagamento. Segue as instruções apresentadas durante a compra e confirma o endereço de email que introduzires.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Posso consultar o guia ao meu ritmo?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="faq-answer" aria-hidden="true">
+                            Sim. Sendo um recurso digital, podes consultar os conteúdos de acordo com as condições de acesso indicadas no momento da compra.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            O guia substitui uma consulta médica ou nutricional?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="faq-answer" aria-hidden="true">
+                            Não. O guia tem fins informativos e não substitui o aconselhamento, o diagnóstico ou o tratamento prestado por um médico, nutricionista ou outro profissional de saúde.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            Tenho apoio se tiver dificuldades com o acesso?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="faq-answer" aria-hidden="true">
+                            Se tiveres dificuldades, contacta a equipa através do email de suporte indicado no final desta página.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. OFERTA FINAL: CAPA, MODELO E PREÇO -->
+        <section class="offer-section" id="oferta">
+            <div class="container">
+
+                <div class="offer-intro">
+                    <span class="tagline">Conhece o Guia VitalEla</span>
+
+                    <h2 class="section-title">Dá espaço ao teu bem-estar</h2>
+
+                    <p>
+                        Reúne os conteúdos num só lugar e consulta-os ao teu ritmo. Conhece a oferta completa abaixo.
+                    </p>
+                </div>
+
+                <div class="offer-media">
+
+                    <div class="book-card">
+                        <img
+                            src="VitalEla.Oficial.Cover.png"
+                            alt="Capa do Guia VitalEla"
+                            loading="lazy">
+                    </div>
+
+                    <div class="model-card">
+                        <img
+                            src="VitalEla.model.1.0.png"
+                            alt="Modelo da marca VitalEla"
+                            loading="lazy">
+                    </div>
+
+                </div>
+
+                <p class="offer-label">
+                    Guia digital de saúde e bem-estar feminino
+                </p>
+
+                <div class="price-box">
+                    <h3 class="price-heading">Adquire o teu guia</h3>
+
+                    <p class="price-description">
+                        Consulta a oferta e dá o próximo passo ao teu ritmo.
+                    </p>
+
+                    <div class="old-price">15.000 Kz</div>
+
+                    <div class="current-price">
+                        8.500 <span>Kz</span>
+                    </div>
+
+                    <a
+                        href="https://pay.kursinha.com/c/6a25d2bb6dbea0fb06e2b55a"
+                        class="cta-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onclick="if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');">
+
+                        <i class="fa-solid fa-book-open"></i>
+                        ADQUIRIR O MEU GUIA
+                    </a>
+
                     <div class="trust-bar">
-    <div class="trust-item"><i class="fa-solid fa-lock"></i> Pagamento 100% seguro</div>
-    <div class="trust-item"><i class="fa-solid fa-bolt"></i> Acesso imediato</div>
-    <div class="trust-item"><i class="fa-solid fa-headset"></i> Suporte dedicado</div>
-</div>
-                    <i class="fa-solid fa-square-check"></i> Recebe acesso imediatamente após a confirmação
-                </div>
-            </div>
-        </div>
-    </section>
+                        <div class="trust-item">
+                            <i class="fa-solid fa-lock"></i>
+                            Pagamento na plataforma
+                        </div>
 
-    <section class="entrega-section">
+                        <div class="trust-item">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Produto digital
+                        </div>
+                    </div>
+
+                    <p class="secure-notice">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Consulta as condições de pagamento e acesso apresentadas no checkout.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
         <div class="container">
-            <h2 class="section-title">O Que Vais Aprender</h2>
-            <div class="grid-entrega">
-                
-                <div class="entrega-card">
-                    <div class="entrega-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-                    <h3>1. O Método Completo VitalEla</h3>
-                    <p> Aprende passo a passo como construir uma rotina saudável através da alimentação, exercício, saúde hormonal, inteligência emocional e autocuidado, tudo organizado num único método.</p>
-                </div>
+            <a href="mailto:vitalelaservices@gmail.com" class="suporte-link">
+                <i class="fa-solid fa-envelope"></i>
+                Suporte ao Cliente: vitalelaservices@gmail.com
+            </a>
 
-                <div class="entrega-card">
-                    <div class="entrega-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3>2. Bónus Exclusivo</h3>
-                    <p>O teu bónus exclusivo. Aprende a transformar a tua rotina através de hábitos inteligentes, alimentação equilibrada e estratégias sustentáveis para te sentires mais leve e com mais energia no dia a dia. Um guia simples e prático para te ajudar a conquistar mais saúde, confiança e bem-estar.</p>
-                </div>
-
-                <div class="entrega-card">
-                    <div class="entrega-icon"><i class="fa-solid fa-bed"></i></div>
-                    <h3>3. Higiene do Sono e Gestão do Stress</h3>
-                    <p>Técnicas científicas e comportamentais de relaxamento e respiração consciente para acalmar o teu sistema nervoso, garantindo um sono reparador que zera os teus níveis de cortisol logo pela manhã.</p>
-                </div>
-
-                <div class="entrega-card">
-                    <div class="entrega-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>4. Monitorização além da Balança</h3>
-                    <p>Aprende a medir o teu progresso através de indicadores físicos e emocionais reais, libertando-te da ditadura da balança e focando na evolução da tua energia e amor-próprio.</p>
-                </div>
-
+            <div class="powered">
+                POWERED BY BWA (Beyond World Alliance)
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-container">
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Como funciona a entrega dos e-books?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        O processo é 100% automatizado. Assim que fazes o pagamento na plataforma segura da Kursinha, o sistema valida e envia os dois arquivos digitais em formato PDF diretamente para o e-mail que introduzido no momento da compra.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Tenho suporte se tiver dificuldades com o download?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Com certeza! A VitalEla oferece-te suporte total. Se tiveres qualquer problema ou não encontrares o e-mail na tua caixa de entrada, basta enviares uma mensagem para o nosso e-mail oficial de atendimento.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Estes guias servem para mulheres de qualquer país?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Sim. Os princípios, hábitos e estratégias apresentados nestes guias são universais e podem ser aplicados por mulheres em qualquer parte do mundo. O foco está na construção de uma rotina saudável, no fortalecimento da autoestima e na adoção de hábitos sustentáveis que se adaptam facilmente à realidade de cada pessoa.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-   <footer>
-    <div class="container">
-        <a href="mailto:vitalelaservices@gmail.com" class="suporte-link">
-            <i class="fa-solid fa-envelope"></i> Suporte ao Cliente: vitalelaservices@gmail.com
-        </a>
-        <div class="powered">POWERED BY BWA (Beyond World Alliance)</div>
-    </div>
-</footer>
-
+    <!-- FUNCIONAMENTO DO FAQ -->
     <script>
-        // JS do FAQ Acórdão com animação fluida de altura
-        document.querySelectorAll('.faq-question').forEach(question => {
+        document.querySelectorAll('.faq-question').forEach((question) => {
             question.addEventListener('click', () => {
-                const item = question.parentElement;
+                const item = question.closest('.faq-item');
                 const answer = item.querySelector('.faq-answer');
-                
-                if (item.classList.contains('active')) {
-                    answer.style.maxHeight = null;
-                    item.classList.remove('active');
-                } else {
-                    // Fecha qualquer outro FAQ ativo antes de abrir o novo
-                    document.querySelectorAll('.faq-item').forEach(el => {
-                        el.classList.remove('active');
-                        el.querySelector('.faq-answer').style.maxHeight = null;
-                    });
-                    
+                const isOpen = item.classList.contains('active');
+
+                // Fecha as outras perguntas abertas.
+                document.querySelectorAll('.faq-item').forEach((otherItem) => {
+                    otherItem.classList.remove('active');
+
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.setAttribute('aria-hidden', 'true');
+                    otherAnswer.style.maxHeight = null;
+                });
+
+                // Abre a pergunta selecionada, se estava fechada.
+                if (!isOpen) {
                     item.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    question.setAttribute('aria-expanded', 'true');
+                    answer.setAttribute('aria-hidden', 'false');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
                 }
             });
         });
